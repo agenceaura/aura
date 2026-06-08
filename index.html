@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agence Aura - Branding, Frontend, Marketing</title>
+    
+    <!-- Google Fonts for Modern Premium Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Lenis Smooth Scroll (Tubik Aesthetic) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor (Tubik Aesthetic) -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header / Navbar (Centered Premium Layout) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="nav-logo">AURA.</div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-center desktop-only">
+                <div class="nav-links">
+                    <a href="#portfolio" class="nav-link-staggered" data-text="TRABAJO">TRABAJO</a>
+                    <a href="#services" class="nav-link-staggered" data-text="SERVICIOS">SERVICIOS</a>
+                    <a href="#about" class="nav-link-staggered" data-text="NOSOTROS">NOSOTROS</a>
+                </div>
+            </nav>
+
+            <div class="nav-right">
+                <div class="monopo-lang-selector desktop-only" id="monopo-lang-trigger">
+                    <div class="lang-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="9" cy="9" r="5" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+                            <circle cx="15" cy="9" r="5" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+                            <circle cx="12" cy="14" r="5" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="lang-stack">
+                        <div class="lang-top" id="lang-active">ESPAÑOL</div>
+                        <div class="lang-bottom" id="lang-next">ENGLISH</div>
+                    </div>
+                </div>
+                <a href="#contact" class="nav-cta-outline desktop-only">Contáctanos</a>
+                
+                <!-- Hamburger Menu Button (Mobile Only) -->
+                <button class="burger-menu" id="burger-trigger">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="#portfolio" class="mobile-link">TRABAJO</a>
+            <a href="#services" class="mobile-link">SERVICIOS</a>
+            <a href="#about" class="mobile-link">NOSOTROS</a>
+            <a href="#contact" class="mobile-link mobile-cta">CONTACTO</a>
+        </nav>
+        <div class="mobile-info">
+            <div class="mobile-lang-wrap">
+                <span class="active">ES</span>
+                <span>ES</span>
+                <span>EN</span>
+                <span>FR</span>
+                <span>AL</span>
+            </div>
+            <p>contact@agenceaura.ch</p>
+            <div class="mobile-socials">
+                <span>IG</span> <span>LI</span> <span>WA</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Noise / Grain Overlay for the whole page to give it that premium organic texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- MAIN WRAPPER -->
+    <main>
+    <!-- CAPA 1: HERO FIXED (Fondo estático tipo Huge Inc) -->
+    <section class="hero-section fixed-hero" id="hero">
+        <div class="aura-container">
+            <canvas id="aura-canvas"></canvas>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Explora Agence Aura</span>
+        </div>
+    </section>
+
+    <!-- CAPA 2: CONTENIDO SCROLL (Sube y tapa) -->
+    <div class="scrolling-wrapper">
+        <!-- Espaciador que permite ver el aura al inicio -->
+        <div class="viewport-spacer"></div>
+
+
+
+
+
+
+
+        <!-- Component: Expanding Flex Cards Portfolio -->
+        <section class="portfolio-flex-section">
+            <div class="portfolio-flex-container">
+                <!-- Project 1 -->
+                <a href="#" class="portfolio-flex-item reveal-item" data-project="branding" style="background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1500&auto=format&fit=crop');">
+                    <div class="flex-overlay"></div>
+                    <div class="flex-content">
+                        <h3 class="flex-title">BRANDING & IDENTITY</h3>
+                        <p class="flex-description">Creamos identidades visuales que trascienden el tiempo.</p>
+                        <span class="flex-btn">Ver Detalles →</span>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="#" class="portfolio-flex-item reveal-item" data-project="uiux" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1500&auto=format&fit=crop');">
+                    <div class="flex-overlay"></div>
+                    <div class="flex-content">
+                        <h3 class="flex-title">UI/UX DESIGN</h3>
+                        <p class="flex-description">Interfaces intuitivas diseñadas para la conversión.</p>
+                        <span class="flex-btn">Ver Detalles →</span>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="#" class="portfolio-flex-item reveal-item" data-project="webdev" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1500&auto=format&fit=crop');">
+                    <div class="flex-overlay"></div>
+                    <div class="flex-content">
+                        <h3 class="flex-title">WEB DEVELOPMENT</h3>
+                        <p class="flex-description">Código de alto rendimiento con tecnologías modernas.</p>
+                        <span class="flex-btn">Ver Detalles →</span>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="#" class="portfolio-flex-item reveal-item" data-project="strategy" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1500&auto=format&fit=crop');">
+                    <div class="flex-overlay"></div>
+                    <div class="flex-content">
+                        <h3 class="flex-title">DIGITAL STRATEGY</h3>
+                        <p class="flex-description">Crecimiento escalable basado en datos reales.</p>
+                        <span class="flex-btn">Ver Detalles →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Component: Kinetic Slice Manifesto & Interactive Switch -->
+        <section class="kinetic-manifesto reveal-item" id="experimental">
+            <div class="manifesto-grid">
+                <div class="slice-container">
+                    <!-- Invisible base to provide physical dimensions -->
+                    <h2><span class="mani-text">Sueña.<br>Crea.<br>Inspira.</span></h2>
+                    
+                    <div class="slice-layer slice-1"><h2><span class="mani-text">Sueña.<br>Crea.<br>Inspira.</span></h2></div>
+                    <div class="slice-layer slice-2"><h2><span class="mani-text">Sueña.<br>Crea.<br>Inspira.</span></h2></div>
+                    <div class="slice-layer slice-3"><h2><span class="mani-text">Sueña.<br>Crea.<br>Inspira.</span></h2></div>
+                    <div class="slice-layer slice-4"><h2><span class="mani-text">Sueña.<br>Crea.<br>Inspira.</span></h2></div>
+                    <div class="slice-layer slice-5"><h2><span class="mani-text">Sueña.<br>Crea.<br>Inspira.</span></h2></div>
+                </div>
+
+                <!-- Premium Interactive Switch -->
+                <div class="switch-container">
+                    <div class="premium-switch" id="physics-switch">
+                        <div class="switch-track-glow"></div>
+                        <div class="tactile-lever">
+                            <div class="lever-ridges"></div>
+                        </div>
+                    </div>
+                    <p class="switch-label" id="switch-lbl">BOTÓN</p>
+                </div>
+            </div>
+        </section>        <!-- Component: Good Design (Kinetic Stagger) -->
+        <section class="good-design-section" id="good-design">
+            <h2 class="gd-text">
+                <div class="line-wrap"><span class="line-inner" id="gd-1">EL BUEN</span></div>
+                <div class="line-wrap"><span class="line-inner" id="gd-2">DISEÑO</span></div>
+                <div class="line-wrap"><span class="line-inner" id="gd-3">ES BUEN</span></div>
+                <div class="line-wrap"><span class="line-inner" id="gd-4">NEGOCIO*</span></div>
+            </h2>
+        </section>
+
+    </main>
+
+    <!-- PORTFOLIO MODAL OVERLAY -->
+    <div class="portfolio-modal-wrapper" id="portfolio-modal">
+        <div class="modal-bg-image" id="modal-bg-image"></div>
+        <div class="modal-backdrop"></div>
+        
+        <div class="modal-content-container">
+            <button class="modal-close-btn" id="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-scroll-area">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modal-title">TITLE</h2>
+                    <h3 class="modal-tagline" id="modal-tagline">Tagline</h3>
+                </div>
+                
+                <div class="modal-body-grid">
+                    <div class="modal-specs">
+                        <h4 class="specs-title">Especificaciones Técnicas</h4>
+                        <ul class="specs-list" id="modal-specs">
+                            <!-- Injected dynamically -->
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-desc">
+                        <p id="modal-desc">Descripción</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <div class="modal-footer-left">
+                    <span class="modal-project-badge">PROYECTO SELECCIONADO: AGENCIA AURA v1.0</span>
+                </div>
+                <div class="modal-footer-right">
+                    <a href="#" class="modal-btn outline">FICHA TÉCNICA</a>
+                    <a href="#contact" class="modal-btn solid" id="modal-consult">CONSULTAR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Component 5: Informational Footer (Huge Style) -->
+    <footer class="aura-footer" id="contact">
+        <div class="footer-grid">
+            <!-- Column 1: Headline & Action -->
+            <div class="footer-col col-main">
+                <h2 class="footer-headline">Hablemos de tu próximo movimiento.</h2>
+                <div class="newsletter-wrap">
+                    <input type="email" placeholder="Correo electrónico" class="footer-input">
+                    <button class="footer-submit">Enviar</button>
+                </div>
+            </div>
+
+            <!-- Column 2: Contact Email -->
+            <div class="footer-col">
+                <h3 class="footer-label">Correo Electrónico</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:contact@agenceaura.ch" style="text-transform: lowercase;">contact@agenceaura.ch</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Legalities -->
+            <div class="footer-col">
+                <h3 class="footer-label">Legales</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Términos Legales</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact (CH/AR) -->
+            <div class="footer-col">
+                <h3 class="footer-label">Contacto</h3>
+                <div class="contact-group">
+                    <p class="region-label">Suiza (CH)</p>
+                    <div class="contact-links">
+                        <a href="tel:+41XXXXXXXXX" class="contact-item"><i class="fas fa-phone-alt"></i> +41 XX XXX XXX</a>
+                        <a href="https://wa.me/41XXXXXXXXX" class="contact-item"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="contact-group">
+                    <p class="region-label">Argentina (AR)</p>
+                    <div class="contact-links">
+                        <a href="tel:+54XXXXXXXXX" class="contact-item"><i class="fas fa-phone-alt"></i> +54 9 XX XXXX XXXX</a>
+                        <a href="https://wa.me/54XXXXXXXXX" class="contact-item"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom-bar">
+            <span class="copyright">Copyright © 2026 Agence Aura. Todos los derechos reservados.</span>
+            <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Subir ↑</button>
+        </div>
+    </footer>
+
+    <!-- CURIOUS OVERLAY -->
+    <div class="curious-overlay" id="curious-overlay">
+        <div class="curious-content">
+            <h2 class="curious-message" id="curious-msg">Si sos curioso, no dudes en trabajar con nosotros.</h2>
+            
+            <div class="switch-container curious-switch-container">
+                <div class="premium-switch is-active" id="curious-physics-switch">
+                    <div class="switch-track-glow"></div>
+                    <div class="tactile-lever">
+                        <div class="lever-ridges"></div>
+                    </div>
+                </div>
+                <p class="switch-label" id="curious-lbl">VOLVER A LA PÁGINA</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
