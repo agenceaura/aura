@@ -1569,13 +1569,11 @@ html, body {
 .slice-1 { clip-path: polygon(0% 0%, 20% 0%, 20% 100%, 0% 100%); }
 .slice-2 { 
     clip-path: polygon(20% 0%, 40% 0%, 40% 100%, 20% 100%); 
-    filter: blur(3px); 
     opacity: 0.8;
 }
 .slice-3 { clip-path: polygon(40% 0%, 60% 0%, 60% 100%, 40% 100%); }
 .slice-4 { 
     clip-path: polygon(60% 0%, 80% 0%, 80% 100%, 60% 100%); 
-    filter: blur(2px);
 }
 .slice-5 { clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%); }
 

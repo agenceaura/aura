@@ -389,7 +389,8 @@ document.addEventListener('DOMContentLoaded', () => {
             slices.forEach((slice, index) => {
                 const speed = (sliceSpeeds[index] || 0.1) * multiplier;
                 const moveY = progress * speed * windowHeight;
-                slice.style.transform = `translateY(${moveY}px)`;
+                // Force hardware acceleration with translate3d
+                slice.style.transform = `translate3d(0, ${moveY}px, 0)`;
             });
         }
     }
@@ -478,10 +479,8 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-revealed');
-                } else {
-                    // Remove to re-trigger the pop effect on every scroll
-                    entry.target.classList.remove('is-revealed');
                 }
+                // We removed the else block to stop it from re-triggering and causing lag
             });
         }, {
             threshold: 0.35 // Triggers when 35% of the white block is visible
