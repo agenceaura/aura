@@ -527,7 +527,8 @@ document.addEventListener('DOMContentLoaded', () => {
             fCol2: "Correo Electrónico", fCol3: "Legales", fPriv: "Privacidad", fAcc: "Accesibilidad", fTerm: "Términos Legales", fCook:"Cookies",
             fCol4: "Contacto", fCH: "Suiza (CH)", fAR: "Argentina (AR)",
             fCopy: "Copyright © 2026 Agence Aura. Todos los derechos reservados.", fTop: "Subir ↑",
-            mSpecs: "Especificaciones Técnicas", mBadge: "PROYECTO SELECCIONADO: AGENCIA AURA v1.0", mSheet: "FICHA TÉCNICA", mInquire: "CONSULTAR"
+            mSpecs: "Especificaciones Técnicas", mBadge: "PROYECTO SELECCIONADO: AGENCIA AURA v1.0", mSheet: "FICHA TÉCNICA", mInquire: "CONSULTAR",
+            agendaTitle: "Antes de diseñar, escuchamos.", agendaText: "No empezamos con un brief genérico. Empezamos con una conversación real sobre tu negocio: qué está funcionando, qué no, y hacia dónde querés ir. Esa claridad es lo que hace que cada decisión de diseño tenga un propósito estratégico.", agendaCta: "→ Agendá tu llamada gratuita de 30 minutos"
         },
         EN: {
             navWork: "WORK", navService: "SERVICE", navAbout: "ABOUT US", navContact: "Contact us",
@@ -547,7 +548,8 @@ document.addEventListener('DOMContentLoaded', () => {
             fCol2: "Email", fCol3: "Legal", fPriv: "Privacy", fAcc: "Accessibility", fTerm: "Legal Terms", fCook:"Cookies",
             fCol4: "Contact", fCH: "Switzerland (CH)", fAR: "Argentina (AR)",
             fCopy: "Copyright © 2026 Agence Aura. All rights reserved.", fTop: "Top ↑",
-            mSpecs: "Technical Specifications", mBadge: "SELECTED PROJECT: AGENCE AURA v1.0", mSheet: "TECHNICAL SHEET", mInquire: "INQUIRE NOW"
+            mSpecs: "Technical Specifications", mBadge: "SELECTED PROJECT: AGENCE AURA v1.0", mSheet: "TECHNICAL SHEET", mInquire: "INQUIRE NOW",
+            agendaTitle: "Before we design, we listen.", agendaText: "We don't start with a generic brief. We start with a real conversation about your business: what's working, what isn't, and where you want to go. That clarity is what makes every design decision strategically purposeful.", agendaCta: "→ Book your free 30-minute call"
         },
         FR: {
             navWork: "TRAVAIL", navService: "SERVICES", navAbout: "À PROPOS", navContact: "Contactez-nous",
@@ -566,7 +568,8 @@ document.addEventListener('DOMContentLoaded', () => {
             fCol2: "E-mail", fCol3: "Légal", fPriv: "Confidentialité", fAcc: "Accessibilité", fTerm: "Termes", fCook:"Cookies",
             fCol4: "Contact", fCH: "Suisse (CH)", fAR: "Argentine (AR)",
             fCopy: "Copyright © 2026 Agence Aura. Tous droits réservés.", fTop: "Haut ↑",
-            mSpecs: "Spécifications Techniques", mBadge: "PROJET SÉLECTIONNÉ: AGENCE AURA v1.0", mSheet: "FICHE TECHNIQUE", mInquire: "CONSULTER"
+            mSpecs: "Spécifications Techniques", mBadge: "PROJET SÉLECTIONNÉ: AGENCE AURA v1.0", mSheet: "FICHE TECHNIQUE", mInquire: "CONSULTER",
+            agendaTitle: "Avant de concevoir, nous écoutons.", agendaText: "Nous ne commençons pas par un brief générique. Nous commençons par une vraie conversation sur votre entreprise : ce qui fonctionne, ce qui ne fonctionne pas, et où vous voulez aller. Cette clarté est ce qui rend chaque décision de design stratégiquement pertinente.", agendaCta: "→ Réservez votre appel gratuit de 30 minutes"
         },
         AL: {
             navWork: "ARBEIT", navService: "DIENSTLEISTUNGEN", navAbout: "ÜBER UNS", navContact: "Kontakt",
@@ -585,7 +588,8 @@ document.addEventListener('DOMContentLoaded', () => {
             fCol2: "E-Mail", fCol3: "Rechtliches", fPriv: "Datenschutz", fAcc: "Barrierefreiheit", fTerm: "Bedingungen", fCook:"Cookies",
             fCol4: "Kontakt", fCH: "Schweiz (CH)", fAR: "Argentinien (AR)",
             fCopy: "Copyright © 2026 Agence Aura. Alle Rechte vorbehalten.", fTop: "Nach oben ↑",
-            mSpecs: "Technische Spezifikationen", mBadge: "AUSGEWÄHLTES PROJEKT: AGENCE AURA v1.0", mSheet: "DATENBLATT", mInquire: "ANFRAGEN"
+            mSpecs: "Technische Spezifikationen", mBadge: "AUSGEWÄHLTES PROJEKT: AGENCE AURA v1.0", mSheet: "DATENBLATT", mInquire: "ANFRAGEN",
+            agendaTitle: "Bevor wir gestalten, hören wir zu.", agendaText: "Wir beginnen nicht mit einem generischen Briefing. Wir beginnen mit einem echten Gespräch über Ihr Unternehmen: Was funktioniert, was nicht, und wohin Sie wollen. Diese Klarheit macht jede Designentscheidung strategisch sinnvoll.", agendaCta: "→ Buchen Sie Ihren kostenlosen 30-Minuten-Anruf"
         }
     };
 
@@ -666,6 +670,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const fCopy = document.querySelector('.copyright'); if(fCopy) fCopy.textContent = t.fCopy;
         const fTop = document.querySelector('.back-to-top'); if(fTop) fTop.textContent = t.fTop;
+
+        // Agenda Section
+        const agendaTitle = document.getElementById('agenda-title'); if(agendaTitle) agendaTitle.textContent = t.agendaTitle;
+        const agendaText = document.getElementById('agenda-text'); if(agendaText) agendaText.textContent = t.agendaText;
+        const agendaCta = document.getElementById('agenda-cta'); if(agendaCta) agendaCta.textContent = t.agendaCta;
 
         // Modal Statics
         const modSpecs = document.querySelector('.specs-title'); if(modSpecs) modSpecs.textContent = t.mSpecs;
@@ -769,29 +778,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const portfolioData = {
         ES: {
             branding: {
-                title: "Branding & Identity",
+                title: "Branding e Identidad",
                 tagline: "Identidades visuales que trascienden el tiempo.",
-                image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1500&auto=format&fit=crop",
+                image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1500&auto=format&fit=crop",
                 specs: [
                     "<strong>Entrega:</strong> Manual de marca completo (PDF Interactivo).",
                     "<strong>Timeline:</strong> 3 a 5 semanas.",
                     "<strong>Formatos:</strong> Vectorial, Web, Print & Motion."
                 ],
-                description: "Diseñamos el ADN de tu marca. Desde la creación de logotipos minimalistas hasta la arquitectura visual completa, como lo hicimos para el lanzamiento de FLOT BURGER, asegurando que cada punto de contacto respire profesionalismo."
+                description: "Tu marca habla antes de que vos lo hagas. Analizamos cómo te estás comunicando hoy y construimos una identidad visual que sea coherente, profesional y reconocible en cada punto de contacto, desde una tarjeta hasta un pitch deck."
             },
             uiux: {
-                title: "UI/UX Design",
+                title: "Diseño Gráfico, UI & UX",
                 tagline: "Interfaces intuitivas diseñadas para la conversión.",
-                image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1500&auto=format&fit=crop",
+                image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1500&auto=format&fit=crop",
                 specs: [
                     "<strong>Herramientas:</strong> Figma / Adobe XD / Prototipado.",
                     "<strong>Metodología:</strong> User-Centric Design & Testing.",
                     "<strong>Resultado:</strong> Prototipo 100% interactivo."
                 ],
-                description: "Creamos experiencias digitales fluidas. Nos enfocamos en la jerarquía visual y la psicología del color para que tu producto no solo sea estético, sino funcional, optimizando flujos de trabajo complejos como el dashboard de gestión de BioMatch."
+                description: "Un mal diseño de interfaz le cuesta clientes a tu negocio sin que te des cuenta. Auditamos la experiencia actual de tus usuarios y diseñamos flujos que guían, convierten y fidelizan, basados en comportamiento real, no en suposiciones."
             },
             webdev: {
-                title: "Web Development",
+                title: "Web e Integración de IA",
                 tagline: "Código de alto rendimiento con tecnologías modernas.",
                 image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1500&auto=format&fit=crop",
                 specs: [
@@ -799,10 +808,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     "<strong>Backend:</strong> Supabase (Realtime Database & Auth).",
                     "<strong>Performance:</strong> 95+ Score en Google Lighthouse."
                 ],
-                description: "Desarrollamos plataformas web robustas y escalables. Especialistas en Progressive Web Apps (PWA) para asegurar que tu sitio funcione sin conexión y con tiempos de carga mínimos, garantizando una experiencia inmersiva para el usuario."
+                description: "Tu sitio web es tu vendedor más activo. Desarrollamos con tecnologías modernas, velocidad de carga optimizada y arquitectura escalable, pensada para crecer con tu negocio sin tener que rehacer todo en 18 meses."
             },
             strategy: {
-                title: "Digital Strategy",
+                title: "Estrategia Digital",
                 tagline: "Crecimiento escalable basado en datos reales.",
                 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1500&auto=format&fit=crop",
                 specs: [
@@ -810,7 +819,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "<strong>Enfoque:</strong> ROI & Growth Consulting.",
                     "<strong>Reportes:</strong> Dashboards personalizados."
                 ],
-                description: "Potenciamos tu presencia digital mediante pauta estratégica y posicionamiento de marca. Analizamos el comportamiento de tu audiencia en Misiones y el mundo para captar leads de alta calidad y maximizar tu inversión publicitaria."
+                description: "Muchas empresas invierten en marketing sin saber qué está funcionando. Analizamos tus canales, tu competencia y tus métricas actuales para construir una estrategia con dirección clara, objetivos medibles y foco en resultados."
             }
         },
         EN: {
@@ -1006,17 +1015,50 @@ document.addEventListener('DOMContentLoaded', () => {
             const projectId = this.dataset.project;
 
             if (window.innerWidth <= 768) {
-                if (!this.classList.contains('mobile-active')) {
-                    portfolioItems.forEach(other => {
-                        if (other !== this) other.classList.remove('mobile-active');
-                    });
-                    this.classList.add('mobile-active');
-                } else {
-                    openModal(projectId); // Second tap opens
-                }
+                // Open directly on one tap on mobile
+                openModal(projectId);
             } else {
                 openModal(projectId); // First click opens on desktop
             }
+        });
+    });
+
+    // ==========================================
+    // LEGAL MODAL LOGIC
+    // ==========================================
+    const legalWrapper = document.getElementById('legal-modal');
+    const legalCloseBtn = document.getElementById('legal-modal-close');
+    const legalBody = document.getElementById('legal-modal-body');
+    const legalTriggers = document.querySelectorAll('.legal-trigger');
+
+    const openLegalModal = (legalType) => {
+        const template = document.getElementById(`tpl-${legalType}`);
+        if (!template) return;
+        
+        // Clone template content and insert into modal body
+        legalBody.innerHTML = '';
+        legalBody.appendChild(template.content.cloneNode(true));
+        
+        legalWrapper.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+        if(typeof lenis !== 'undefined') lenis.stop();
+    };
+
+    const closeLegalModal = () => {
+        legalWrapper.classList.remove('is-active');
+        document.body.style.overflow = '';
+        if(typeof lenis !== 'undefined') lenis.start();
+    };
+
+    if(legalCloseBtn) {
+        legalCloseBtn.addEventListener('click', closeLegalModal);
+    }
+
+    legalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const legalType = trigger.getAttribute('data-legal');
+            openLegalModal(legalType);
         });
     });
 });

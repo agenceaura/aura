@@ -114,24 +114,33 @@
 
 
 
+        <!-- Component: Agenda tu Llamada -->
+        <section class="agenda-section" id="agenda">
+            <div class="agenda-container">
+                <h2 class="agenda-title" id="agenda-title">Antes de diseñar, escuchamos.</h2>
+                <p class="agenda-text" id="agenda-text">No empezamos con un brief genérico. Empezamos con una conversación real sobre tu negocio: qué está funcionando, qué no, y hacia dónde querés ir. Esa claridad es lo que hace que cada decisión de diseño tenga un propósito estratégico.</p>
+                <a href="#contact" class="agenda-cta" id="agenda-cta">→ Agendá tu llamada gratuita de 30 minutos</a>
+            </div>
+        </section>
+
         <!-- Component: Expanding Flex Cards Portfolio -->
         <section class="portfolio-flex-section">
             <div class="portfolio-flex-container">
                 <!-- Project 1 -->
-                <a href="#" class="portfolio-flex-item reveal-item" data-project="branding" style="background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c490?q=60&w=800&auto=format&fit=crop');">
+                <a href="#" class="portfolio-flex-item reveal-item" data-project="branding" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?q=60&w=800&auto=format&fit=crop');">
                     <div class="flex-overlay"></div>
                     <div class="flex-content">
-                        <h3 class="flex-title">BRANDING & IDENTITY</h3>
+                        <h3 class="flex-title">BRANDING E IDENTIDAD</h3>
                         <p class="flex-description">Creamos identidades visuales que trascienden el tiempo.</p>
                         <span class="flex-btn">Ver Detalles →</span>
                     </div>
                 </a>
 
                 <!-- Project 2 -->
-                <a href="#" class="portfolio-flex-item reveal-item" data-project="uiux" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?q=60&w=800&auto=format&fit=crop');">
+                <a href="#" class="portfolio-flex-item reveal-item" data-project="uiux" style="background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c490?q=60&w=800&auto=format&fit=crop');">
                     <div class="flex-overlay"></div>
                     <div class="flex-content">
-                        <h3 class="flex-title">UI/UX DESIGN</h3>
+                        <h3 class="flex-title">DISEÑO GRÁFICO, UI & UX</h3>
                         <p class="flex-description">Interfaces intuitivas diseñadas para la conversión.</p>
                         <span class="flex-btn">Ver Detalles →</span>
                     </div>
@@ -141,7 +150,7 @@
                 <a href="#" class="portfolio-flex-item reveal-item" data-project="webdev" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=60&w=800&auto=format&fit=crop');">
                     <div class="flex-overlay"></div>
                     <div class="flex-content">
-                        <h3 class="flex-title">WEB DEVELOPMENT</h3>
+                        <h3 class="flex-title">WEB E INTEGRACIÓN DE IA</h3>
                         <p class="flex-description">Código de alto rendimiento con tecnologías modernas.</p>
                         <span class="flex-btn">Ver Detalles →</span>
                     </div>
@@ -151,7 +160,7 @@
                 <a href="#" class="portfolio-flex-item reveal-item" data-project="strategy" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=60&w=800&auto=format&fit=crop');">
                     <div class="flex-overlay"></div>
                     <div class="flex-content">
-                        <h3 class="flex-title">DIGITAL STRATEGY</h3>
+                        <h3 class="flex-title">ESTRATEGIA DIGITAL</h3>
                         <p class="flex-description">Crecimiento escalable basado en datos reales.</p>
                         <span class="flex-btn">Ver Detalles →</span>
                     </div>
@@ -248,11 +257,13 @@
                 </div>
             </div>
 
-            <!-- Column 2: Contact Email -->
+            <!-- Column 2: Contacto -->
             <div class="footer-col">
-                <h3 class="footer-label">Correo Electrónico</h3>
+                <h3 class="footer-label">Contacto</h3>
                 <ul class="footer-links">
                     <li><a href="mailto:contact@agenceaura.ch" style="text-transform: lowercase;">contact@agenceaura.ch</a></li>
+                    <li><a href="tel:+5493764109310" class="contact-item"><i class="fas fa-phone-alt"></i> +54 9 376 410 9310</a></li>
+                    <li><a href="https://wa.me/41783378929" class="contact-item"><i class="fab fa-whatsapp"></i> +41 78 337 89 29</a></li>
                 </ul>
             </div>
 
@@ -260,30 +271,11 @@
             <div class="footer-col">
                 <h3 class="footer-label">Legales</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Accesibilidad</a></li>
-                    <li><a href="#">Términos Legales</a></li>
-                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#" class="legal-trigger" data-legal="privacidad">Privacidad</a></li>
+                    <li><a href="#" class="legal-trigger" data-legal="accesibilidad">Accesibilidad</a></li>
+                    <li><a href="#" class="legal-trigger" data-legal="terminos">Términos Legales</a></li>
+                    <li><a href="#" class="legal-trigger" data-legal="cookies">Cookies</a></li>
                 </ul>
-            </div>
-
-            <!-- Column 4: Contact (CH/AR) -->
-            <div class="footer-col">
-                <h3 class="footer-label">Contacto</h3>
-                <div class="contact-group">
-                    <p class="region-label">Suiza (CH)</p>
-                    <div class="contact-links">
-                        <a href="tel:+41XXXXXXXXX" class="contact-item"><i class="fas fa-phone-alt"></i> +41 XX XXX XXX</a>
-                        <a href="https://wa.me/41XXXXXXXXX" class="contact-item"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    </div>
-                </div>
-                <div class="contact-group">
-                    <p class="region-label">Argentina (AR)</p>
-                    <div class="contact-links">
-                        <a href="tel:+54XXXXXXXXX" class="contact-item"><i class="fas fa-phone-alt"></i> +54 9 XX XXXX XXXX</a>
-                        <a href="https://wa.me/54XXXXXXXXX" class="contact-item"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    </div>
-                </div>
             </div>
         </div>
         
@@ -309,6 +301,142 @@
             </div>
         </div>
     </div>
+
+    <!-- LEGAL MODAL OVERLAY -->
+    <div class="legal-modal-wrapper" id="legal-modal">
+        <div class="modal-backdrop"></div>
+        <div class="legal-modal-content">
+            <button class="modal-close-btn" id="legal-modal-close"><i class="fas fa-times" style="color: #000;"></i></button>
+            <div class="legal-scroll-area" id="legal-modal-body">
+                <!-- Content injected here via JS based on data-legal -->
+            </div>
+        </div>
+    </div>
+
+    <template id="tpl-privacidad">
+        <h4 class="legal-policy-type">POLÍTICA DE</h4>
+        <h2 class="legal-title">Privacidad</h2>
+        <p class="legal-date">Última actualización: junio 2026</p>
+        <p>En Agence Aura, la privacidad de quienes interactúan con nosotros es una prioridad. Esta política describe qué información recopilamos, cómo la usamos y cuáles son tus derechos.</p>
+        
+        <hr class="legal-divider">
+
+        <h3 class="legal-subtitle">QUÉ INFORMACIÓN RECOPILAMOS</h3>
+        <p>Cuando completás un formulario de contacto o agendás una llamada, recopilamos datos como nombre, correo electrónico, empresa y mensaje. También recopilamos de forma automática datos de navegación (dirección IP, tipo de navegador, páginas visitadas) mediante herramientas de analítica.</p>
+        
+        <h3 class="legal-subtitle">PARA QUÉ USAMOS TU INFORMACIÓN</h3>
+        <ul class="legal-list">
+            <li>Responder a consultas y gestionar el proceso de onboarding</li>
+            <li>Enviar información sobre nuestros servicios si así lo solicitaste</li>
+            <li>Mejorar el rendimiento y la experiencia de este sitio</li>
+            <li>Cumplir con obligaciones legales vigentes en Suiza y Argentina</li>
+        </ul>
+        
+        <h3 class="legal-subtitle">COMPARTICIÓN DE DATOS</h3>
+        <p>No vendemos ni cedemos tus datos a terceros. Podemos compartir información con proveedores de servicios (como plataformas de email o analítica) bajo acuerdos de confidencialidad. En ningún caso con fines publicitarios.</p>
+        
+        <h3 class="legal-subtitle">TUS DERECHOS</h3>
+        <p>Tenés derecho a acceder, corregir o eliminar tus datos personales en cualquier momento. Para ejercerlos, escribinos a <strong>contact@agenceaura.ch</strong>. Responderemos en un plazo máximo de 30 días.</p>
+        
+        <h3 class="legal-subtitle">RETENCIÓN DE DATOS</h3>
+        <p>Conservamos tu información únicamente durante el tiempo necesario para cumplir con los fines descritos, salvo que la ley exija un período mayor.</p>
+        
+        <div class="legal-footer">
+            <span>Agence Aura · Suiza & Argentina</span>
+            <span>contact@agenceaura.ch</span>
+        </div>
+    </template>
+
+    <template id="tpl-terminos">
+        <h4 class="legal-policy-type">TÉRMINOS</h4>
+        <h2 class="legal-title">Legales</h2>
+        <p class="legal-date">Última actualización: junio 2026</p>
+        <p>Al acceder y utilizar este sitio web, aceptás los términos y condiciones descritos a continuación. Si no estás de acuerdo, te pedimos que no utilices este sitio.</p>
+        
+        <hr class="legal-divider">
+
+        <h3 class="legal-subtitle">PROPIEDAD INTELECTUAL</h3>
+        <p>Todo el contenido de este sitio —textos, diseños, logotipos, imágenes y código— es propiedad exclusiva de Agence Aura o de sus respectivos titulares. Queda prohibida su reproducción total o parcial sin autorización escrita.</p>
+        
+        <h3 class="legal-subtitle">USO DEL SITIO</h3>
+        <p>Este sitio es exclusivamente para fines informativos y comerciales legítimos. No está permitido utilizarlo para actividades ilegales, enviar comunicaciones no solicitadas, ni intentar acceder a sistemas o datos sin autorización.</p>
+        
+        <h3 class="legal-subtitle">LIMITACIÓN DE RESPONSABILIDAD</h3>
+        <p>Agence Aura no garantiza la disponibilidad continua del sitio ni la exactitud absoluta de toda la información publicada. En ningún caso seremos responsables por daños directos, indirectos o consecuentes derivados del uso de este sitio.</p>
+        
+        <h3 class="legal-subtitle">ENLACES EXTERNOS</h3>
+        <p>Este sitio puede contener enlaces a sitios de terceros. No tenemos control sobre su contenido y no asumimos responsabilidad por su disponibilidad ni sus políticas de privacidad.</p>
+        
+        <h3 class="legal-subtitle">LEGISLACIÓN APLICABLE</h3>
+        <p>Estos términos se rigen por las leyes vigentes en Suiza. Cualquier disputa será resuelta ante los tribunales competentes de ese territorio, salvo que la normativa local aplicable establezca lo contrario.</p>
+        
+        <div class="legal-footer">
+            <span>Agence Aura · Suiza & Argentina</span>
+            <span>contact@agenceaura.ch</span>
+        </div>
+    </template>
+
+    <template id="tpl-accesibilidad">
+        <h4 class="legal-policy-type">POLÍTICA DE</h4>
+        <h2 class="legal-title">Accesibilidad</h2>
+        <p class="legal-date">Última actualización: junio 2026</p>
+        <p>Agence Aura está comprometida con crear experiencias digitales accesibles para todas las personas, independientemente de sus capacidades o del dispositivo que utilicen.</p>
+        
+        <hr class="legal-divider">
+
+        <h3 class="legal-subtitle">NUESTRO COMPROMISO</h3>
+        <p>Trabajamos para que este sitio cumpla con las pautas de accesibilidad web WCAG 2.1 nivel AA. Esto incluye contraste de color adecuado, estructura semántica del contenido, navegación por teclado y compatibilidad con lectores de pantalla.</p>
+        
+        <h3 class="legal-subtitle">MEDIDAS IMPLEMENTADAS</h3>
+        <ul class="legal-list">
+            <li>Etiquetas descriptivas en todos los elementos interactivos</li>
+            <li>Textos alternativos en imágenes con contenido relevante</li>
+            <li>Jerarquía de encabezados clara y consistente</li>
+            <li>Diseño responsive que se adapta a distintos tamaños de pantalla</li>
+            <li>Posibilidad de ampliar el tamaño de texto sin pérdida de funcionalidad</li>
+        </ul>
+        
+        <h3 class="legal-subtitle">LIMITACIONES CONOCIDAS</h3>
+        <p>Aunque nos esforzamos por mantener altos estándares, es posible que algunas secciones en desarrollo presenten limitaciones temporales. Trabajamos continuamente en su mejora.</p>
+        
+        <h3 class="legal-subtitle">¿ENCONTRASTE UNA BARRERA DE ACCESIBILIDAD?</h3>
+        <p>Escribinos a <strong>contact@agenceaura.ch</strong> y lo atenderemos con prioridad. Tu feedback es clave para que podamos mejorar.</p>
+        
+        <div class="legal-footer">
+            <span>Agence Aura · Suiza & Argentina</span>
+            <span>contact@agenceaura.ch</span>
+        </div>
+    </template>
+
+    <template id="tpl-cookies">
+        <h4 class="legal-policy-type">POLÍTICA DE</h4>
+        <h2 class="legal-title">Cookies</h2>
+        <p class="legal-date">Última actualización: junio 2026</p>
+        <p>Este sitio utiliza cookies para mejorar tu experiencia de navegación y analizar cómo se usa el sitio. A continuación explicamos qué son, para qué las usamos y cómo podés gestionarlas.</p>
+        
+        <hr class="legal-divider">
+
+        <h3 class="legal-subtitle">QUÉ SON LAS COOKIES</h3>
+        <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitás un sitio web. Permiten recordar preferencias, analizar el comportamiento de navegación y mejorar la experiencia general.</p>
+        
+        <h3 class="legal-subtitle">TIPOS DE COOKIES QUE UTILIZAMOS</h3>
+        <ul class="legal-list">
+            <li><strong>Cookies técnicas o esenciales:</strong> necesarias para el funcionamiento básico del sitio. No pueden desactivarse.</li>
+            <li><strong>Cookies analíticas:</strong> nos permiten entender cómo los usuarios navegan el sitio (páginas visitadas, tiempo en el sitio, origen del tráfico). Usamos herramientas como Google Analytics o similares.</li>
+            <li><strong>Cookies de preferencias:</strong> almacenan configuraciones como el idioma seleccionado para mejorar tu experiencia en futuras visitas.</li>
+        </ul>
+        
+        <h3 class="legal-subtitle">COOKIES DE TERCEROS</h3>
+        <p>Algunas funcionalidades del sitio pueden cargar cookies de terceros (por ejemplo, plataformas de agendamiento de llamadas o integraciones con redes sociales). Estos servicios tienen sus propias políticas de cookies.</p>
+        
+        <h3 class="legal-subtitle">CÓMO GESTIONAR LAS COOKIES</h3>
+        <p>Podés configurar tu navegador para rechazar o eliminar cookies en cualquier momento. Ten en cuenta que desactivar ciertas cookies puede afectar el funcionamiento de algunas partes del sitio. También podés gestionar tus preferencias a través del panel de consentimiento al ingresar al sitio.</p>
+        
+        <div class="legal-footer">
+            <span>Agence Aura · Suiza & Argentina</span>
+            <span>contact@agenceaura.ch</span>
+        </div>
+    </template>
 
     <!-- Main JavaScript -->
     <script src="script.js"></script>
