@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let targetY = 0;
 
         function resize() {
-            const dpr = window.devicePixelRatio || 1;
+            const dpr = Math.min(window.devicePixelRatio || 1, 1.25);
             // Adaptive size based on screen width
             const winW = window.innerWidth;
             const size = winW < 768 ? Math.min(winW * 1.5, 500) : 1100;
@@ -144,8 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mouseX += (targetX - mouseX) * 0.05;
             mouseY += (targetY - mouseY) * 0.05;
 
-            const w = canvas.width / (window.devicePixelRatio || 1);
-            const h = canvas.height / (window.devicePixelRatio || 1);
+            const dpr = Math.min(window.devicePixelRatio || 1, 1.25);
+            const w = canvas.width / dpr;
+            const h = canvas.height / dpr;
             
             // MAGIC: Different movement speeds for layers (Parallax Depth)
             const centerX = w / 2 + mouseX;
@@ -175,14 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
             drawWarpedCircle(ctx, centerX + wobbleX, centerY + wobbleY, 300 * pulse, time, true);
             ctx.restore();
 
-            // 2. Layer: Main Neon Orb (Turbulent Energy)
+            // 2. Layer: Main Neon Orb (Turbulent Energy - Optimized with Radial Gradient)
             ctx.save();
-            const mainGrad = ctx.createConicGradient(time * 0.4, centerX, centerY);
+            const mainGrad = ctx.createRadialGradient(centerX, centerY, 10 * pulse, centerX, centerY, 220 * pulse);
             mainGrad.addColorStop(0, '#00E5FF');
-            mainGrad.addColorStop(0.2, '#2979FF');
-            mainGrad.addColorStop(0.5, '#D500F9');
-            mainGrad.addColorStop(0.8, '#2979FF');
-            mainGrad.addColorStop(1, '#00E5FF');
+            mainGrad.addColorStop(0.3, '#2979FF');
+            mainGrad.addColorStop(0.7, '#D500F9');
+            mainGrad.addColorStop(1, 'transparent');
             
             ctx.fillStyle = mainGrad;
             drawWarpedCircle(ctx, centerX, centerY, 220 * pulse, time * 1.5, true);
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function drawWarpedCircle(ctx, x, y, radius, t, fillStyle) {
             ctx.beginPath();
-            const segments = 120; // High quality segments
+            const segments = 60; // Optimized quality (blurred in CSS anyway)
             for (let i = 0; i <= segments; i++) {
                 const angle = (i / segments) * Math.PI * 2;
                 
